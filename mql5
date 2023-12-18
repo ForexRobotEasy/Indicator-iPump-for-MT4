@@ -1,0 +1,73 @@
+
+// Indicator iPump for MT4
+// Developer: Forex Robot Easy Team
+// Site: forexroboteasy.com
+
+#property strict
+
+// Trend Detection Function
+int detectTrend(int timeframe)
+{
+    int trend = 0;
+
+    // Your trend detection logic here
+
+    return trend;
+}
+
+// Support and Resistance Levels Function
+int assessLevels(double price)
+{
+    int levelType = 0;
+
+    // Your support and resistance level assessment logic here
+
+    return levelType;
+}
+
+// Overbought and Oversold Zones Function
+bool determineOverboughtOversold(double price)
+{
+    bool isOverboughtOversold = false;
+
+    // Your overbought and oversold zone determination logic here
+
+    return isOverboughtOversold;
+}
+
+// Initialization function
+int OnInit()
+{
+    // Initialize necessary variables and indicators
+
+    return(INIT_SUCCEEDED);
+}
+
+// Deinitialization function
+void OnDeinit(const int reason)
+{
+    // Perform necessary cleanup tasks
+}
+
+// Start function
+void OnStart()
+{
+    int currentTrend = detectTrend(1); // Example timeframe: M1
+    int levelType = assessLevels(1.2345); // Example price: 1.2345
+    bool isOverboughtOversold = determineOverboughtOversold(1.2345); // Example price: 1.2345
+
+    // Your trading logic based on the trend, support/resistance level, and overbought/oversold zone
+
+    // Place trades, manage positions, etc.
+
+    // Logical conclusion
+    int conclusion = 0;
+
+    if (currentTrend == 1 && levelType == 1 && isOverboughtOversold)
+        conclusion = 1;
+    else if (currentTrend == -1 && levelType == -1 && !isOverboughtOversold)
+        conclusion = -1;
+
+    // Output conclusion
+    Alert('Conclusion: ', conclusion);
+}
